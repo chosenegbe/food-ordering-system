@@ -23,7 +23,6 @@ public class OrderCreateCommandHandler {
                                      OrderDataMapper orderDataMapper,
                                      OrderCreatedPaymentRequestMessagePublisher orderCreatedPaymentRequestMessagePublisher) {
         this.orderCreateHelper = orderCreateHelper;
-
         this.orderDataMapper = orderDataMapper;
         this.orderCreatedPaymentRequestMessagePublisher = orderCreatedPaymentRequestMessagePublisher;
     }
@@ -33,7 +32,8 @@ public class OrderCreateCommandHandler {
         log.info("Order created with id: {}" , orderCreatedEvent.getOrder().getId().getValue());
         String message = "Order created with id: " + orderCreatedEvent.getOrder().getId().getValue();
         orderCreatedPaymentRequestMessagePublisher.publish(orderCreatedEvent);
-        return orderDataMapper.orderToCreateOrderResponse(orderCreatedEvent.getOrder(), message);
+        return orderDataMapper.orderToCreateOrderResponse(orderCreatedEvent.getOrder(),
+                "Order created successfully");
     }
 
 }
