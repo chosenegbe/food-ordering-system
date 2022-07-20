@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   schema-registry:
-    image: confluentinc/cp-schema-registry:${KAFKA_VERSION:-latest}
+    image: confluentinc/cp-schema-registry:${KAFKA_VERSION}
     hostname: schema-registry
     depends_on:
       - kafka-broker-1
@@ -19,7 +19,7 @@ services:
       - ${GLOBAL_NETWORK:-kafka}
 
   kafka-broker-1:
-    image: confluentinc/cp-kafka:${KAFKA_VERSION:-latest}
+    image: confluentinc/cp-kafka:${KAFKA_VERSION}
     hostname: schema-registry
     ports:
       - "19092:19092"
@@ -37,7 +37,7 @@ services:
       - ${GLOBAL_NETWORK:-kafka}
 
   kafka-broker-2:
-    image: confluentinc/cp-kafka:${KAFKA_VERSION:-latest}
+    image: confluentinc/cp-kafka:${KAFKA_VERSION}
     hostname: schema-registry
     ports:
       - "29092:29092"
@@ -55,7 +55,7 @@ services:
       - ${GLOBAL_NETWORK:-kafka}
 
   kafka-broker-3:
-    image: confluentinc/cp-kafka:${KAFKA_VERSION:-latest}
+    image: confluentinc/cp-kafka:${KAFKA_VERSION}
     hostname: schema-registry
     ports:
       - "39092:39092"
