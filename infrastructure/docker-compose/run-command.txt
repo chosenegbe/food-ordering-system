@@ -1,0 +1,10 @@
+first run: docker-compose -f common.yml -f zookeeper.yml up
+
+test_zookeeper_health: echo ruok | nc localhost 2181
+
+
+2nd run: docker-compose -f common.yml -f kafka_cluster.yml up
+
+3rd run: docker-compose -f common.yml -f init_kafka.yml up
+
+
