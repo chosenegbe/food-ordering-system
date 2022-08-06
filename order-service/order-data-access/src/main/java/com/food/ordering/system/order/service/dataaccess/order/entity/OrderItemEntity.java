@@ -23,7 +23,6 @@ public class OrderItemEntity {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ORDER_ID")
     private OrderEntity order;
-
     private UUID productId;
     private BigDecimal price;
     private Integer quantity;
