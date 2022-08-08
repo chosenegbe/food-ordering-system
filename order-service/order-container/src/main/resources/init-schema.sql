@@ -4,10 +4,10 @@ CREATE SCHEMA "order";
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
-DROP TYPE IF EXISTS order_status
+DROP TYPE IF EXISTS order_status;
 CREATE TYPE order_status AS ENUM ('PENDING', 'PAID', 'APPROVED', 'CANCELLED', 'CANCELLING');
 
-DROP TABLE IF EXISTS "order".orders CASCADE
+DROP TABLE IF EXISTS "order".orders CASCADE;
 
 CREATE TABLE "order".orders
 (
@@ -21,7 +21,7 @@ CREATE TABLE "order".orders
     CONSTRAINT orders_pkey PRIMARY KEY (id)
 );
 
-DROP TABLE IF EXISTS "order".order_items CASCADE
+DROP TABLE IF EXISTS "order".order_items CASCADE;
 
 CREATE TABLE "order".order_items
 (

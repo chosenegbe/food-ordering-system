@@ -29,7 +29,7 @@ public class GlobalExceptionHandler {
                 .build();
 
     }
-    @ResponseBody
+ /*   @ResponseBody
     @ExceptionHandler(value = {Exception.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ErrorDTO handleException(ValidationException validationException) {
@@ -52,7 +52,7 @@ public class GlobalExceptionHandler {
         }
 
         return errorDTO;
-    }
+    }*/
 
     private String extractViolationsFromException(ConstraintViolationException validationException) {
         return validationException.getConstraintViolations()

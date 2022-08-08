@@ -1,4 +1,4 @@
-DROP SCHEMA IF EXISTS customer CASCADE
+DROP SCHEMA IF EXISTS customer CASCADE;
 
 CREATE SCHEMA customer;
 
@@ -21,8 +21,8 @@ AS
     SELECT id,
         username,
         first_name,
-        last_name,
-    FROM customer.customers
+        last_name
+       FROM customer.customers
 WITH DATA;
 
 refresh materialized VIEW customer.order_customer_m_view;
@@ -30,7 +30,7 @@ refresh materialized VIEW customer.order_customer_m_view;
 DROP function IF EXISTS customer.refresh_order_customer_m_view;
 
 CREATE OR replace function customer.refresh_order_customer_m_view()
-return trigger
+returns trigger
 AS '
 BEGIN
     refresh materialized VIEW customer.order_customer_m_view;
