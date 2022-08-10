@@ -46,3 +46,10 @@ target/
 .mule/**/*
 .DS_Store
 velocity.log
+
+# -----------------#
+# project specific #
+#------------------#
+*.snapshot
+*/volumes/*
+*/target/*
