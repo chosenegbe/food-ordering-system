@@ -7,7 +7,7 @@ import java.util.List;
 
 public class PaymentCancelledEvent extends PaymentEvent {
 
-    protected PaymentCancelledEvent(Payment payment, ZonedDateTime createdAt, List<String> failureMessages) {
+    public PaymentCancelledEvent(Payment payment, ZonedDateTime createdAt, List<String> failureMessages) {
         super(payment, createdAt, failureMessages);
     }
 }
