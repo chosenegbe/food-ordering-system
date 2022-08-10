@@ -9,6 +9,7 @@
         <module>common/common-domain</module>
         <module>infrastructure</module>
         <module>customer-service</module>
+        <module>payment-service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
