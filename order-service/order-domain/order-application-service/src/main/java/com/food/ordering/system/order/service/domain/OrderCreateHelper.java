@@ -63,7 +63,7 @@ public class OrderCreateHelper {
     private void checkCustomer(UUID customerId) {
         Optional<Customer> customer = customerRepository.findCustomer(customerId);
 
-        if(customer.isEmpty()) {
+        if (customer.isEmpty()) {
             log.warn("Could not find customer with id: {}", customerId);
             throw new OrderDomainException("Could not find customer with id: " + customerId);
         }

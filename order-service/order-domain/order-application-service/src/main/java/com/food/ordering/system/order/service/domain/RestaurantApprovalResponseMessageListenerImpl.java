@@ -16,7 +16,7 @@ public class RestaurantApprovalResponseMessageListenerImpl implements Restaurant
     }
 
     @Override
-    public void orderCancelled(RestaurantApprovalResponse restaurantApprovalResponse) {
+    public void orderRejected(RestaurantApprovalResponse restaurantApprovalResponse) {
 
     }
 }
