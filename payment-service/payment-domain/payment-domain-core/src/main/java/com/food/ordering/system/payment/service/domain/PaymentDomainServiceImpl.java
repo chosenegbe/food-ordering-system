@@ -67,7 +67,6 @@ public class PaymentDomainServiceImpl implements PaymentDomainService {
             payment.updateStatus(PaymentStatus.FAILED);
             return new PaymentFailedEvent(payment, ZonedDateTime.now(ZoneId.of(UTC)), failureMessages);
         }
-        return null;
     }
 
     private void addCreditEntry(Payment payment, CreditEntry creditEntry) {
