@@ -18,10 +18,11 @@ import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.UUID;
 
+import static com.food.ordering.system.DomainConstants.UTC;
+
 @Slf4j
 public class PaymentDomainServiceImpl implements PaymentDomainService {
 
-    private static final String UTC = "UTC";
     @Override
     public PaymentEvent validateAndInitiatePayment(Payment payment,
                                                    CreditEntry creditEntry,
