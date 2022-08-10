@@ -20,7 +20,7 @@ services:
 
   kafka-broker-1:
     image: confluentinc/cp-kafka:${KAFKA_VERSION}
-    hostname: schema-registry
+    hostname: kafka-broker-1
     ports:
       - "19092:19092"
     environment:
@@ -38,7 +38,7 @@ services:
 
   kafka-broker-2:
     image: confluentinc/cp-kafka:${KAFKA_VERSION}
-    hostname: schema-registry
+    hostname: kafka-broker-2
     ports:
       - "29092:29092"
     environment:
@@ -56,7 +56,7 @@ services:
 
   kafka-broker-3:
     image: confluentinc/cp-kafka:${KAFKA_VERSION}
-    hostname: schema-registry
+    hostname: kafka-broker-3
     ports:
       - "39092:39092"
     environment:
