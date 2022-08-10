@@ -4,8 +4,8 @@ import com.food.ordering.system.valueobject.BaseId;
 
 import java.util.UUID;
 
-public class PaymentId extends BaseId<UUID> {
-    public PaymentId(UUID value) {
+public class CreditHistoryId extends BaseId<UUID> {
+    public CreditHistoryId(UUID value) {
         super(value);
     }
 }
