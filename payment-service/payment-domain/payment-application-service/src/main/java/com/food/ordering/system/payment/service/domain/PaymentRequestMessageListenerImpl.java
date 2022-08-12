@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class PaymentRequestMessageListenerImpl implements PaymentRequestMessageListener {
 
-    private final PaymentRequestHelper paymentRequestHelper;`
+    private final PaymentRequestHelper paymentRequestHelper;
 
     public PaymentRequestMessageListenerImpl(PaymentRequestHelper paymentRequestHelper) {
         this.paymentRequestHelper = paymentRequestHelper;
