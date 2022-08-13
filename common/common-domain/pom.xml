@@ -11,8 +11,4 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>common-domain</artifactId>
-
-    <properties>
-    </properties>
-
 </project>

@@ -117,7 +117,7 @@
             </dependency>
             <dependency>
                 <groupId>com.food.ordering.system</groupId>
-                <artifactId>restaurant-application-service</artifactId>
+                <artifactId>restaurant-application-services</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
