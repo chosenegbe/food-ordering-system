@@ -1,7 +1,7 @@
 package com.food.ordering.system.restaurant.service.domain.dto;
 
 import com.food.ordering.system.restaurant.service.domain.entity.Product;
-import com.food.ordering.system.valueobject.RestaurantApprovalStatus;
+import com.food.ordering.system.valueobject.RestaurantOrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -19,7 +19,7 @@ public class RestaurantApprovalRequest {
     private String sagaId;
     private String restaurantId;
     private String orderId;
-    private RestaurantApprovalStatus restaurantApprovalStatus;
+    private RestaurantOrderStatus restaurantOrderStatus;
     private List<Product> products;
     private BigDecimal price;
     private Instant createdAt;

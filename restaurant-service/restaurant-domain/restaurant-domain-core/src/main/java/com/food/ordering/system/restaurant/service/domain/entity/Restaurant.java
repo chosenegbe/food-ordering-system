@@ -52,7 +52,7 @@ public class Restaurant extends AggregateRoot<RestaurantId> {
         orderDetail = builder.orderDetail;
     }
 
-    public static Builder newBuilder() {
+    public static Builder builder() {
         return new Builder();
     }
 

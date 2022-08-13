@@ -1,5 +1,5 @@
 package com.food.ordering.system.valueobject;
 
-public enum RestaurantApprovalStatus {
+public enum RestaurantOrderStatus {
     PAID
 }
