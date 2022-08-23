@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
+import static com.food.ordering.system.order.service.domain.entity.Order.FAILURE_MESSAGE_DELIMITER;
+
 
 @Slf4j
 @Validated
@@ -31,6 +33,6 @@ public class PaymentResponseMessageListenerImpl implements PaymentResponseMessag
     public void paymentCancelled(PaymentResponse paymentResponse) {
         orderPaymentSaga.rollback(paymentResponse);
         log.info("Order with id: {} is roll back with failure messages: {}", paymentResponse.getOrderId()
-            , String.join(",", paymentResponse.getFailureMessages()));
+            , String.join(FAILURE_MESSAGE_DELIMITER, paymentResponse.getFailureMessages()));
     }
 }
