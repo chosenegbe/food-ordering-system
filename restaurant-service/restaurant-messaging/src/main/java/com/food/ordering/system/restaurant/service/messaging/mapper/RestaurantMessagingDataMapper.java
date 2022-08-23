@@ -28,6 +28,7 @@ public class RestaurantMessagingDataMapper {
                 .setCreatedAt(orderApprovedEvent.getCreatedAt().toInstant())
                 .setOrderApprovalStatus(OrderApprovalStatus.valueOf(orderApprovedEvent
                         .getOrderApproval().getApprovalStatus().name()))
+                .setFailureMessages(orderApprovedEvent.getFailureMessages())
                 .build();
     }
 
@@ -42,6 +43,7 @@ public class RestaurantMessagingDataMapper {
                 .setCreatedAt(orderRejectedEvent.getCreatedAt().toInstant())
                 .setOrderApprovalStatus(OrderApprovalStatus.valueOf(orderRejectedEvent
                         .getOrderApproval().getApprovalStatus().name()))
+                .setFailureMessages(orderRejectedEvent.getFailureMessages())
                 .build();
     }
 
