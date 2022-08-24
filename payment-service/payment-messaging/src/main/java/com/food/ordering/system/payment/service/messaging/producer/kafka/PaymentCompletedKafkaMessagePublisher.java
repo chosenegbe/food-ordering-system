@@ -33,7 +33,7 @@ public class PaymentCompletedKafkaMessagePublisher implements PaymentCompletedMe
     public void publish(PaymentCompletedEvent domainEvent) {
         String orderId = domainEvent.getPayment().getOrderId().getValue().toString();
 
-        log.info("received PaymentCompletedEvent for order id: {}", orderId);
+        log.info("Received PaymentCompletedEvent for order id: {}", orderId);
 
         try {
             PaymentResponseAvroModel paymentResponseAvroModel = paymentMessagingDataMapper
