@@ -121,9 +121,9 @@ public class PaymentDomainServiceImpl implements PaymentDomainService {
 
     }
 
-    private Money getTotalHistoryAmount(List<CreditHistory> creditHistories, TransactionType debit) {
+    private Money getTotalHistoryAmount(List<CreditHistory> creditHistories, TransactionType transactionType) {
         return creditHistories.stream()
-                .filter(creditHistory -> debit == creditHistory.getTransactionType())
+                .filter(creditHistory -> transactionType == creditHistory.getTransactionType())
                 .map(CreditHistory::getAmount)
                 .reduce(Money.ZERO, Money::add);
     }

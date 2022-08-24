@@ -15,7 +15,7 @@ CREATE TABLE "payment".payments
     customer_id uuid NOT NULL,
     order_id uuid NOT NULL,
     price numeric(10,2) NOT NULL,
-    created_at TIMESTAMP WITH ZONE NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE NOT NULL,
     status payment_status NOT NULL,
     CONSTRAINT payments_pkey PRIMARY KEY (id)
 );

@@ -12,11 +12,13 @@ import com.food.ordering.system.valueobject.Money;
 import com.food.ordering.system.valueobject.OrderId;
 import com.food.ordering.system.valueobject.ProductId;
 import com.food.ordering.system.valueobject.RestaurantId;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+@Component
 public class RestaurantDataAccessMapper {
 
     public List<UUID> restaurantToRestaurantProducts (Restaurant restaurant) {
