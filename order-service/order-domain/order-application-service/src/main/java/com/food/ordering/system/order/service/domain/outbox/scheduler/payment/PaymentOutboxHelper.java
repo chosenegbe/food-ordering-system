@@ -55,5 +55,4 @@ public class PaymentOutboxHelper {
         paymentOutboxRepository.deleteByTypeAndOutboxStatusAndSagaStatus(ORDER_SAGA_NAME, outboxStatus, sagaStatus);
 
     }
-
 }
