@@ -14,6 +14,6 @@ public class OrderApprovalEventProduct {
     @JsonProperty
     private String id;
     @JsonProperty
-    private String quantity;
+    private int quantity;
 
 }
