@@ -23,7 +23,7 @@ public class ApprovalOutboxDataAccessMapper {
                 .build();
     }
 
-    public OrderApprovalOutboxMessage paymentOutboxEntityToOrderPaymentOutboxMessage(ApprovalOutboxEntity
+    public OrderApprovalOutboxMessage approvalOutboxEntityToOrderApprovalOutboxMessage(ApprovalOutboxEntity
                                                                                     approvalOutboxEntity) {
         return OrderApprovalOutboxMessage.builder()
                 .id(approvalOutboxEntity.getId())
