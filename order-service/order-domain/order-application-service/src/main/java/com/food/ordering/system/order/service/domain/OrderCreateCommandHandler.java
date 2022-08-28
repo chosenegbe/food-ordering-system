@@ -20,7 +20,6 @@ public class OrderCreateCommandHandler {
 
     private final OrderCreateHelper orderCreateHelper;
     private final OrderDataMapper orderDataMapper;
-
     private final PaymentOutboxHelper paymentOutboxHelper;
     private final OrderSagaHelper orderSagaHelper;
     public OrderCreateCommandHandler(OrderCreateHelper orderCreateHelper,
