@@ -1,8 +1,5 @@
 package com.food.ordering.system.order.service.messaging.publisher.kafka;
 
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.food.ordering.system.kafka.order.avro.model.PaymentRequestAvroModel;
 import com.food.ordering.system.kafka.order.avro.model.RestaurantApprovalRequestAvroModel;
 import com.food.ordering.system.kafka.producer.service.KafkaMessageHelper;
 import com.food.ordering.system.kafka.producer.service.KafkaProducer;
@@ -24,18 +21,15 @@ public class OrderApprovalEventKafkaPublisher implements RestaurantApprovalReque
     private final OrderServiceConfigData orderServiceConfigData;
     private final KafkaProducer<String, RestaurantApprovalRequestAvroModel> kafkaProducer;
     private final KafkaMessageHelper kafkaMessageHelper;
-    private final ObjectMapper objectMapper;
 
     public OrderApprovalEventKafkaPublisher(OrderMessagingDataMapper orderMessagingDataMapper,
                                             OrderServiceConfigData orderServiceConfigData,
                                             KafkaProducer<String, RestaurantApprovalRequestAvroModel> kafkaProducer,
-                                            KafkaMessageHelper kafkaMessageHelper,
-                                            ObjectMapper objectMapper) {
+                                            KafkaMessageHelper kafkaMessageHelper) {
         this.orderMessagingDataMapper = orderMessagingDataMapper;
         this.orderServiceConfigData = orderServiceConfigData;
         this.kafkaProducer = kafkaProducer;
         this.kafkaMessageHelper = kafkaMessageHelper;
-        this.objectMapper = objectMapper;
     }
 
     @Override

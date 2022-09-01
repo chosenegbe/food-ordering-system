@@ -27,7 +27,6 @@ public class Order extends AggregateRoot<OrderId> {
         trackingId = new TrackingId(UUID.randomUUID());
         orderStatus = OrderStatus.PENDING;
         initializeOrderItems();
-
     }
 
     private void initializeOrderItems() {
@@ -56,7 +55,7 @@ public class Order extends AggregateRoot<OrderId> {
     }
 
     private void validateItemsPrice() {
-        Money orderItemsTotal = items.stream().map( orderItem -> {
+        Money orderItemsTotal = items.stream().map(orderItem -> {
             validateItemPrice(orderItem);
             return orderItem.getSubTotal();
         }).reduce(Money.ZERO, Money::add);

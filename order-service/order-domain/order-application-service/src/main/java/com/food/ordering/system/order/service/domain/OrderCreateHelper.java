@@ -7,7 +7,6 @@ import com.food.ordering.system.order.service.domain.entity.Restaurant;
 import com.food.ordering.system.order.service.domain.event.OrderCreatedEvent;
 import com.food.ordering.system.order.service.domain.exception.OrderDomainException;
 import com.food.ordering.system.order.service.domain.mapper.OrderDataMapper;
-import com.food.ordering.system.order.service.domain.ports.output.message.publisher.payment.OrderCreatedPaymentRequestMessagePublisher;
 import com.food.ordering.system.order.service.domain.ports.output.repository.CustomerRepository;
 import com.food.ordering.system.order.service.domain.ports.output.repository.OrderRepository;
 import com.food.ordering.system.order.service.domain.ports.output.repository.RestaurantRepository;
@@ -72,7 +71,7 @@ public class OrderCreateHelper {
 
     private Order saveOrder(Order order) {
         Order orderResult =  orderRepository.save(order);
-        if (orderResult == null ) {
+        if (orderResult == null) {
             log.error("Could not save order!");
             throw new OrderDomainException("Could not save order!");
         }
