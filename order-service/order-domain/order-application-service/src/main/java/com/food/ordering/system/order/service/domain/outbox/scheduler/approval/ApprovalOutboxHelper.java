@@ -9,7 +9,6 @@ import com.food.ordering.system.order.service.domain.outbox.module.approval.Orde
 import com.food.ordering.system.order.service.domain.ports.output.repository.ApprovalOutBoxRepository;
 import com.food.ordering.system.outbox.OutboxStatus;
 import com.food.ordering.system.saga.SagaStatus;
-import com.food.ordering.system.valueobject.OrderApprovalStatus;
 import com.food.ordering.system.valueobject.OrderStatus;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
