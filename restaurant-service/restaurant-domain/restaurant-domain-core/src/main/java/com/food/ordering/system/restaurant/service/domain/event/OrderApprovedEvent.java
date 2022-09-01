@@ -1,6 +1,5 @@
 package com.food.ordering.system.restaurant.service.domain.event;
 
-import com.food.ordering.system.event.publisher.DomainEventPublisher;
 import com.food.ordering.system.restaurant.service.domain.entity.OrderApproval;
 import com.food.ordering.system.valueobject.RestaurantId;
 
